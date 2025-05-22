@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ervilha Tattoo - Estúdio de Tatuagem Profissional</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .tattoo-card {
+      transition: all 0.3s ease;
+    }
+
+    .tattoo-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .artist-card:hover .artist-overlay {
+      opacity: 1;
+    }
+
+    .artist-overlay {
+      transition: all 0.3s ease;
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+
+  <!-- WhatsApp Float Button - Circular Perfeito com Notificação -->
+  <div class="fixed bottom-8 right-8 z-50">
+    <div class="relative h-16 w-16">
+      <!-- Efeito de pulsação (onda externa) -->
+      <div class="absolute inset-0 rounded-full bg-[#25D366] opacity-20 animate-ping"></div>
+
+      <!-- Ponto de notificação -->
+      <div class="absolute top-0 right-0 h-4 w-4 bg-red-500 rounded-full border-2 border-white"></div>
+
+      <!-- Botão principal perfeitamente redondo -->
+      <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20agendar%20uma%20tatuagem!"
+        class="relative flex items-center justify-center h-full w-full rounded-full bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg transition-all duration-300 transform hover:scale-110 hover:shadow-xl"
+        target="_blank" rel="noopener noreferrer" aria-label="Agendar pelo WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header/Navbar -->
+  <header class="bg-black text-white sticky top-0 z-50 shadow-md">
+    <div class="container max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo e Nome -->
+      <a href="#home" class="flex items-center space-x-2">
+        <img src="logo1.svg" alt="Logo Ervilha Tattoo" class="h-16 w-auto">
+        <h1 class="text-2xl font-bold">Ervilha Tattoo</h1>
+      </a>
+
+      <!-- Navegação Desktop -->
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="#home" class="hover:text-green-400 transition">Início</a>
+        <a href="#about" class="hover:text-green-400 transition">Sobre</a>
+        <a href="#gallery" class="hover:text-green-400 transition">Galeria</a>
+        <a href="#faq" class="hover:text-green-400 transition">FAQ</a>
+        <a href="#contact" class="hover:text-green-400 transition">Contato</a>
+
+        <!-- Botão WhatsApp Desktop -->
+        <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20agendar%20uma%20tatuagem!"
+          class="ml-4 bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white font-bold py-2 px-4 rounded transition-shadow duration-300 shadow-md hover:shadow-lg"
+          target="_blank">
+          Agendar
+        </a>
+      </nav>
+    </div>
+  </header>
+
+
+
+
+
+  <!-- Hero Section com Parallax -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+    <!-- Background image com parallax -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="parallax-bg w-full h-full" style="background-image: url('./img14.avif');"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container max-w-7xl mx-auto px-4 text-center relative z-10">
+      <!-- Headline -->
+      <h1
+        class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight animate-gradient bg-gradient-to-r from-purple-400 via-white to-purple-600 bg-clip-text text-transparent drop-shadow-lg">
+        Arte que <span class="italic">fica</span> para sempre
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto font-light tracking-wide text-white/90">
+        No estúdio <strong>Ervilha Tattoo</strong>, transformamos sua ideia em uma<br class="hidden md:block">
+        <span class="font-semibold text-purple-300">obra de arte única na pele</span>.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col md:flex-row justify-center gap-6">
+        <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20agendar%20uma%20tatuagem!"
+          class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full text-lg transition duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 group">
+          <i class="fab fa-whatsapp mr-3 text-xl group-hover:scale-110 transition-transform"></i>
+          <span>Agendar no WhatsApp</span>
+        </a>
+
+        <a href="#gallery"
+          class="bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-10 border border-white rounded-full text-lg transition duration-300 flex items-center justify-center group">
+          <i class="fas fa-images mr-3 group-hover:animate-pulse"></i>
+          <span>Ver Portfólio</span>
+        </a>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div class="mt-16 md:mt-24 animate-bounce">
+        <a href="#about" class="text-white/80 hover:text-purple-400 transition">
+          <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .animate-gradient {
+      background-size: 300% 300%;
+      animation: gradient 8s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Efeito Parallax */
+    .parallax-bg {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      will-change: transform;
+    }
+
+    @media (min-width: 768px) {
+      .parallax-bg {
+        height: 150%;
+      }
+    }
+  </style>
+
+  <script>
+    // Script para o efeito parallax
+    document.addEventListener('DOMContentLoaded', function () {
+      const parallaxBg = document.querySelector('.parallax-bg');
+
+      window.addEventListener('scroll', function () {
+        const scrollPosition = window.pageYOffset;
+        parallaxBg.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+      });
+    });
+  </script>
+
+
+
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-gradient-to-b from-white to-gray-50">
+    <div class="container max-w-7xl mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+        <!-- Imagem Única -->
+        <div class="lg:w-1/2 order-1 lg:order-1">
+          <div
+            class="rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+            <img src="./logo.png" alt="Jessica Ervilha - Tatuadora" class="w-full h-auto object-cover">
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div class="lg:w-1/2 order-2 lg:order-2">
+          <div class="max-w-lg mx-auto lg:mx-0">
+            <span class="text-purple-600 font-semibold tracking-wider">TATUADORA PROFISSIONAL</span>
+            <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-6">
+              Jessica <span class="text-purple-600">Ervilha</span>
+            </h2>
+
+            <div class="space-y-5">
+              <p class="text-gray-700 text-lg leading-relaxed">
+                <span class="text-2xl text-purple-600 font-serif">"</span>
+                Há mais de <strong class="text-purple-700">12 anos</strong>, transformo paixão em arte permanente. Cada
+                tatuagem é uma história escrita na pele, onde misturo <span class="text-purple-600 font-medium">técnica
+                  apurada</span> com expressão artística única.
+                <span class="text-2xl text-purple-600 font-serif float-right">"</span>
+              </p>
+
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Minha jornada começou com o amor pelo desenho, evoluiu para o hobby e se tornou minha
+                <strong>vocação</strong>. No meu estúdio, criei mais que um espaço profissional - um <span
+                  class="italic">santuário criativo</span> onde cada detalhe inspira confiança e arte.
+              </p>
+
+              <div class="bg-purple-50 p-5 rounded-xl border-l-4 border-purple-600">
+                <h4 class="font-bold text-purple-800 mb-2">Especialidade em Flash Tattoo</h4>
+                <p class="text-gray-700">
+                  Adoro a <strong>essência clássica</strong> do flash tattoo - aqueles designs icônicos que ganham vida
+                  com meus traços marcantes e paleta vibrante. Do pequeno símbolo à composição elaborada, cada peça
+                  carrega <span class="text-purple-600">autenticidade e alma</span>.
+                </p>
+              </div>
+
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Para mim, tatuar é <strong>conexão humana</strong>. É sobre transformar ideias em arte que permanece,
+                criando não apenas tatuagens, mas <span class="text-purple-600 font-medium">marcas significativas</span>
+                que contam histórias.
+              </p>
+            </div>
+
+            <!-- Botão CTA -->
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a href="https://wa.me/5511999999999?text=Olá%20Jessica,%20gostaria%20de%20agendar%20uma%20tatuagem!"
+                class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                target="_blank">
+                <i class="fab fa-whatsapp text-xl"></i>
+                Agendar Consulta
+              </a>
+              <a href="#gallery"
+                class="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 flex items-center justify-center gap-2">
+                <i class="fas fa-images"></i>
+                Ver Portfólio
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-20 bg-white">
+    <div class="container max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4">
+        Nossa <span class="text-purple-500">Galeria</span>
+      </h2>
+      <p class="text-gray-700 text-center max-w-2xl mx-auto mb-12">
+        Explore nosso portfólio de trabalhos realizados e inspire-se para sua próxima tatuagem.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Tattoo Card -->
+        <div
+          class="tattoo-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-purple-100">
+          <img src="./img6.avif" alt="Retrato Realista por Ana Silva"
+            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="p-4">
+            <h3 class="font-bold text-purple-600 mb-2">Retrato Realista</h3>
+            <p class="text-gray-600 text-sm mb-3">Tatuagem hiper-realista feita pela Ana Silva</p>
+            <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20fazer%20uma%20tatuagem%20como%20essa%20da%20galeria."
+              class="text-purple-500 hover:text-purple-600 font-medium text-sm inline-flex items-center"
+              target="_blank">
+              Quero uma igual <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="tattoo-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-purple-100">
+          <img src="./img5.avif" alt="Old School por Carlos Mendes"
+            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="p-4">
+            <h3 class="font-bold text-purple-600 mb-2">Old School Colorida</h3>
+            <p class="text-gray-600 text-sm mb-3">Tatuagem tradicional feita pelo Carlos Mendes</p>
+            <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20fazer%20uma%20tatuagem%20como%20essa%20da%20galeria."
+              class="text-purple-500 hover:text-purple-600 font-medium text-sm inline-flex items-center"
+              target="_blank">
+              Quero uma igual <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="tattoo-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-purple-100">
+          <img src="./img3.avif" alt="Mandala por Rafael Lima"
+            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="p-4">
+            <h3 class="font-bold text-purple-600 mb-2">Mandalas Geométricas</h3>
+            <p class="text-gray-600 text-sm mb-3">Tatuagem geométrica feita pelo Rafael Lima</p>
+            <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20fazer%20uma%20tatuagem%20como%20essa%20da%20galeria."
+              class="text-purple-500 hover:text-purple-600 font-medium text-sm inline-flex items-center"
+              target="_blank">
+              Quero uma igual <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="tattoo-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-purple-100">
+          <img src="./img11.avif" alt="Minimalista por Ana Silva"
+            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="p-4">
+            <h3 class="font-bold text-purple-600 mb-2">Minimalismo Elegante</h3>
+            <p class="text-gray-600 text-sm mb-3">Tatuagem fina e delicada feita pela Ana Silva</p>
+            <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20fazer%20uma%20tatuagem%20como%20essa%20da%20galeria."
+              class="text-purple-500 hover:text-purple-600 font-medium text-sm inline-flex items-center"
+              target="_blank">
+              Quero uma igual <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="tattoo-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-purple-100">
+          <img src="./img10.avif" alt="Aquarela por Carlos Mendes"
+            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="p-4">
+            <h3 class="font-bold text-purple-600 mb-2">Aquarela Vibrante</h3>
+            <p class="text-gray-600 text-sm mb-3">Tatuagem estilo aquarela feita pelo Carlos Mendes</p>
+            <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20fazer%20uma%20tatuagem%20como%20essa%20da%20galeria."
+              class="text-purple-500 hover:text-purple-600 font-medium text-sm inline-flex items-center"
+              target="_blank">
+              Quero uma igual <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="tattoo-card group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-purple-100">
+          <img src="./img9.avif" alt="Tribal por Rafael Lima"
+            class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="p-4">
+            <h3 class="font-bold text-purple-600 mb-2">Tribal Moderno</h3>
+            <p class="text-gray-600 text-sm mb-3">Tatuagem tribal contemporânea feita pelo Rafael Lima</p>
+            <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20fazer%20uma%20tatuagem%20como%20essa%20da%20galeria."
+              class="text-purple-500 hover:text-purple-600 font-medium text-sm inline-flex items-center"
+              target="_blank">
+              Quero uma igual <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20ver%20mais%20trabalhos%20de%20vocês."
+          class="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-8 rounded-full transition duration-300"
+          target="_blank">
+          Ver mais trabalhos no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Value Proposition Section -->
+  <section class="relative py-20 bg-gradient-to-b from-gray-50 to-purple-50 overflow-hidden">
+    <!-- Overlay roxo suave -->
+    <div class="absolute inset-0 bg-purple-900 bg-opacity-10 pointer-events-none"></div>
+
+    <div class="container max-w-7xl mx-auto px-4 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 text-purple-900">
+          Arte <span class="text-purple-600">exclusiva</span> para você
+        </h2>
+        <p class="text-purple-800 text-lg max-w-3xl mx-auto">
+          Cada tatuagem é uma criação única, com orçamento personalizado para seu projeto.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Imagem -->
+        <div class="order-2 md:order-1">
+          <div class="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition duration-500">
+            <img src="./img18.avif" alt="Processo criativo de tatuagem" class="w-full h-auto object-cover">
+          </div>
+        </div>
+
+        <!-- Conteúdo -->
+        <div class="order-1 md:order-2">
+          <div class="max-w-lg mx-auto md:mx-0">
+            <h3 class="text-3xl font-bold text-purple-800 mb-6">
+              Por que não trabalhamos com preços fixos?
+            </h3>
+
+            <div class="space-y-6 text-gray-700">
+              <div class="flex items-start gap-4">
+                <div class="bg-purple-100 p-2 rounded-full">
+                  <i class="fas fa-palette text-purple-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-purple-800">Design Personalizado</h4>
+                  <p>Cada projeto é desenvolvido especialmente para você, considerando estilo, complexidade e detalhes
+                    únicos.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="bg-purple-100 p-2 rounded-full">
+                  <i class="fas fa-ruler-combined text-purple-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-purple-800">Tamanho e Localização</h4>
+                  <p>Áreas do corpo e dimensões diferentes exigem técnicas e tempos distintos de trabalho.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="bg-purple-100 p-2 rounded-full">
+                  <i class="fas fa-star text-purple-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-purple-800">Qualidade Garantida</h4>
+                  <p>Usamos apenas materiais premium e técnicas profissionais para resultados duradouros.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-10 bg-purple-50 border-l-4 border-purple-600 p-6 rounded-lg">
+              <h4 class="font-bold text-purple-800 mb-3">Como saber o valor?</h4>
+              <p class="mb-4">Envie sua ideia pelo WhatsApp e receba um orçamento detalhado em até 24h.</p>
+              <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20um%20orçamento%20para%20minha%20tatuagem."
+                class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300"
+                target="_blank">
+                <i class="fab fa-whatsapp"></i> Solicitar orçamento
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-white">
+    <div class="container max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-center mb-4">
+        Perguntas <span class="text-purple-600">Frequentes</span>
+      </h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+        Tire suas dúvidas sobre o processo de tatuagem na Ervilha Tattoo.
+      </p>
+
+      <div class="max-w-3xl mx-auto">
+        <!-- FAQ Item -->
+        <div class="space-y-6">
+          <!-- FAQ 1 -->
+          <div class="border-l-4 border-purple-600 pl-4 pb-6">
+            <button
+              class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg text-purple-700 focus:outline-none">
+              <span>Quanto custa uma tatuagem?</span>
+              <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer mt-3 text-gray-700 text-sm hidden">
+              <p>O valor varia de acordo com tamanho, complexidade, cores e tempo necessário. Tatuagens pequenas começam
+                em R$200, médias entre R$400-800 e grandes acima de R$800. Para um orçamento preciso, envie sua ideia
+                pelo WhatsApp.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="border-l-4 border-purple-600 pl-4 pb-6">
+            <button
+              class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg text-purple-700 focus:outline-none">
+              <span>Quanto tempo demora uma tatuagem?</span>
+              <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer mt-3 text-gray-700 text-sm hidden">
+              <p>Depende do tamanho e complexidade. Tatuagens pequenas podem levar 1-2 horas, médias 3-5 horas e grandes
+                projetos podem exigir várias sessões. Agendamos com tempo suficiente para fazer seu trabalho com calma e
+                perfeição.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="border-l-4 border-purple-600 pl-4 pb-6">
+            <button
+              class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg text-purple-700 focus:outline-none">
+              <span>Dói muito fazer tatuagem?</span>
+              <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer mt-3 text-gray-700 text-sm hidden">
+              <p>A sensação varia de pessoa para pessoa e da área do corpo. Algumas regiões são mais sensíveis, mas a
+                maioria das pessoas descreve como um desconforto suportável. Nossos artistas fazem o possível para
+                tornar a experiência tranquila.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="border-l-4 border-purple-600 pl-4 pb-6">
+            <button
+              class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg text-purple-700 focus:outline-none">
+              <span>Como cuidar da tatuagem depois?</span>
+              <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer mt-3 text-gray-700 text-sm hidden">
+              <p>Após a sessão, fornecemos um kit de cuidados. É essencial manter a área limpa, hidratada e protegida do
+                sol. Evite mar, piscina e exposição direta por 2-3 semanas. Damos suporte pelo WhatsApp durante toda a
+                cicatrização.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="border-l-4 border-purple-600 pl-4 pb-6">
+            <button
+              class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg text-purple-700 focus:outline-none">
+              <span>Posso fazer meu próprio design?</span>
+              <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer mt-3 text-gray-700 text-sm hidden">
+              <p>Claro! Adoramos criar algo único com base em suas ideias. Envie referências, desenhos ou descrições e
+                nosso time desenvolve algo exclusivo. Também temos portfólios para inspirar você.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="border-l-4 border-purple-600 pl-4 pb-6">
+            <button
+              class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg text-purple-700 focus:outline-none">
+              <span>Preciso pagar sinal para agendar?</span>
+              <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer mt-3 text-gray-700 text-sm hidden">
+              <p>Sim, pedimos um sinal de 30% para reservar o horário e iniciar o design. O restante é pago no dia da
+                sessão. O sinal pode ser feito via PIX ou no estúdio e é descontado do valor final.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-gray-700 mb-6">Ainda tem dúvidas? Fale com a gente!</p>
+        <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20tenho%20uma%20dúvida%20sobre%20tatuagem."
+          class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition duration-300"
+          target="_blank">
+          <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-gray-100">
+    <div class="container max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-center mb-4">
+        O que dizem nossos <span class="text-purple-600">clientes</span>
+      </h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+        A satisfação dos nossos clientes é nossa maior recompensa.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div
+          class="bg-white border-l-4 border-purple-600 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Juliana"
+              class="w-14 h-14 rounded-full border-2 border-purple-600">
+            <div>
+              <h4 class="font-semibold text-lg text-purple-700">Juliana R.</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm">
+            "Fiz minha primeira tatuagem com a Jessica e foi uma experiência incrível! Ela foi super atenciosa, explicou
+            todo o processo e o resultado ficou perfeito. Recomendo demais a Ervilha Tattoo!"
+          </p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+          class="bg-white border-l-4 border-purple-600 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcos"
+              class="w-14 h-14 rounded-full border-2 border-purple-600">
+            <div>
+              <h4 class="font-semibold text-lg text-purple-700">Marcos A.</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm">
+            "A Jessica fez um trabalho espetacular no meu braço. O estúdio é impecável, muito limpo e organizado. A
+            tatuagem ficou exatamente como eu queria e o atendimento foi excelente."
+          </p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+          class="bg-white border-l-4 border-purple-600 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Fernanda"
+              class="w-14 h-14 rounded-full border-2 border-purple-600">
+            <div>
+              <h4 class="font-semibold text-lg text-purple-700">Fernanda T.</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm">
+            "Fiz uma tatuagem geométrica com a Jessica e amei o resultado! Ela tem uma técnica incrível de pontilhismo.
+            O
+            estúdio é super aconchegante e todos são muito profissionais. Com certeza voltarei!"
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20agendar%20uma%20tatuagem."
+          class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300"
+          target="_blank">
+          <i class="fab fa-whatsapp"></i> Agende sua tatuagem hoje
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="container max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4">Entre em <span class="text-purple-600">contato</span></h2>
+      <p class="text-gray-700 text-center max-w-2xl mx-auto mb-12">Estamos prontos para transformar sua ideia em arte
+        única.</p>
+
+      <div class="flex flex-col md:flex-row gap-12">
+        <!-- Contact Info -->
+        <div class="md:w-1/2">
+          <div class="bg-gray-100 p-8 rounded-2xl shadow-xl h-full">
+            <h3 class="text-2xl font-semibold text-purple-700 mb-6">Informações de Contato</h3>
+            <div class="space-y-6 text-gray-700">
+
+              <div class="flex items-start gap-4">
+                <i class="fas fa-map-marker-alt text-purple-500 text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold">Endereço</h4>
+                  <p>Rua das Tatuagens, 123<br>Jardim Artístico - São Paulo/SP</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <i class="fas fa-phone-alt text-purple-500 text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold">Telefone</h4>
+                  <p>(11) 9999-9999</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <i class="fas fa-envelope text-purple-500 text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold">Email</h4>
+                  <p>contato@ervilhatattoo.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <i class="fas fa-clock text-purple-500 text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold">Horário de Funcionamento</h4>
+                  <p>Seg a Sex: 10h às 19h<br>Sáb: 10h às 16h<br>Dom: Fechado</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <i class="fab fa-whatsapp text-purple-500 text-xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold">WhatsApp</h4>
+                  <p>(11) 99999-9999</p>
+                  <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20agendar%20uma%20tatuagem."
+                    class="inline-block mt-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold py-2 px-4 rounded-full transition duration-300"
+                    target="_blank">
+                    <i class="fab fa-whatsapp mr-1"></i> Chamar agora
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="mt-10">
+              <h4 class="font-bold text-purple-700 mb-4">Siga a gente nas redes</h4>
+              <div class="flex space-x-4">
+                <a href="#"
+                  class="bg-purple-600 hover:bg-purple-700 text-white w-12 h-12 flex items-center justify-center rounded-full transition duration-300">
+                  <i class="fab fa-instagram text-lg"></i>
+                </a>
+                <a href="#"
+                  class="bg-purple-600 hover:bg-purple-700 text-white w-12 h-12 flex items-center justify-center rounded-full transition duration-300">
+                  <i class="fab fa-facebook-f text-lg"></i>
+                </a>
+                <a href="#"
+                  class="bg-purple-600 hover:bg-purple-700 text-white w-12 h-12 flex items-center justify-center rounded-full transition duration-300">
+                  <i class="fab fa-tiktok text-lg"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="md:w-1/2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658447538!3d-23.565734367638952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1623704123456!5m2!1spt-BR!2sbr"
+            width="100%" height="100%" class="rounded-2xl shadow-lg h-full min-h-[400px]" style="border:0;"
+            allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-purple-900 via-black to-purple-900 text-white relative overflow-hidden">
+    <div class="container max-w-7xl mx-auto px-4 text-center relative z-10">
+      <h2 class="text-4xl font-extrabold mb-4 animate-fade-in">Pronto para sua próxima tatuagem?</h2>
+      <p class="text-xl mb-10 max-w-2xl mx-auto animate-fade-in-delay">
+        Agende agora mesmo pelo WhatsApp e garanta seu horário com nossos artistas renomados.
+      </p>
+
+      <!-- Botão WhatsApp normal -->
+      <a href="https://wa.me/5511999999999?text=Olá%20Ervilha%20Tattoo,%20gostaria%20de%20agendar%20uma%20tatuagem."
+        class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300"
+        target="_blank">
+        <i class="fab fa-whatsapp mr-2"></i> Agendar pelo WhatsApp
+      </a>
+    </div>
+
+    <!-- Efeito de fundo animado -->
+    <div class="absolute top-0 left-0 w-full h-full bg-noise opacity-10 z-0"></div>
+  </section>
+
+  <!-- Tailwind Custom Animations -->
+  <style>
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 1s ease-out forwards;
+    }
+
+    .animate-fade-in-delay {
+      animation: fade-in 1s ease-out forwards;
+      animation-delay: 0.3s;
+    }
+
+    .bg-noise {
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    }
+  </style>
+
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-t from-gray-900 via-black to-gray-900 text-white py-16 relative overflow-hidden">
+    <div class="container max-w-7xl mx-auto px-4 relative z-10">
+      <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
+        <div class="md:w-1/3">
+          <div class="flex items-center mb-6">
+            <img src="logo1.png" alt="Logo Ervilha Tattoo" class="w-18 h-16 mr-3" />
+            <h3 class="text-3xl font-extrabold tracking-wide text-purple-600">Ervilha Tattoo</h3>
+          </div>
+          <p class="text-gray-400 max-w-xs leading-relaxed">
+            Transformando ideias em arte na pele desde 2015. Excelência, segurança e criatividade em cada traço.
+          </p>
+        </div>
+
+
+        <div class="md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-10">
+          <div>
+            <h4 class="text-lg font-bold mb-5 border-b border-purple-600 pb-2">Links</h4>
+            <ul class="space-y-3">
+              <li><a href="#home" class="text-gray-400 hover:text-purple-500 transition duration-300">Início</a></li>
+              <li><a href="#about" class="text-gray-400 hover:text-purple-500 transition duration-300">Sobre</a></li>
+              <li><a href="#artists" class="text-gray-400 hover:text-purple-500 transition duration-300">Artistas</a>
+              </li>
+              <li><a href="#gallery" class="text-gray-400 hover:text-purple-500 transition duration-300">Galeria</a>
+              </li>
+              <li><a href="#faq" class="text-gray-400 hover:text-purple-500 transition duration-300">FAQ</a></li>
+              <li><a href="#contact" class="text-gray-400 hover:text-purple-500 transition duration-300">Contato</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-5 border-b border-purple-600 pb-2">Contato</h4>
+            <ul class="space-y-4 text-gray-400">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-map-marker-alt text-purple-600 mt-1"></i>
+                <span>Rua das Tatuagens, 123<br>Jardim Artístico - SP</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-phone-alt text-purple-600"></i>
+                <span>(11) 9999-9999</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fab fa-whatsapp text-purple-600"></i>
+                <span>(11) 99999-9999</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-5 border-b border-purple-600 pb-2">Redes Sociais</h4>
+            <div class="flex space-x-5">
+              <a href="#"
+                class="bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full hover:bg-purple-600 hover:scale-110 transition-transform duration-300 shadow-lg">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a href="#"
+                class="bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full hover:bg-purple-600 hover:scale-110 transition-transform duration-300 shadow-lg">
+                <i class="fab fa-facebook-f text-xl"></i>
+              </a>
+              <a href="#"
+                class="bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full hover:bg-purple-600 hover:scale-110 transition-transform duration-300 shadow-lg">
+                <i class="fab fa-tiktok text-xl"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-purple-700 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm select-none">
+        <p>© 2023 Ervilha Tattoo. Todos os direitos reservados.</p>
+        <div class="flex space-x-8 mt-4 md:mt-0">
+          <a href="#" class="hover:text-purple-500 transition">Termos de Serviço</a>
+          <a href="#" class="hover:text-purple-500 transition">Política de Privacidade</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background subtle animated circles -->
+    <div
+      class="absolute -bottom-20 -right-20 w-96 h-96 bg-purple-700 rounded-full opacity-20 animate-pulse mix-blend-multiply">
+    </div>
+    <div
+      class="absolute -top-24 -left-16 w-72 h-72 bg-purple-900 rounded-full opacity-15 animate-pulse animation-delay-500 mix-blend-multiply">
+    </div>
+
+    <style>
+      @keyframes pulse {
+
+        0%,
+        100% {
+          opacity: 0.2;
+          transform: scale(1);
+        }
+
+        50% {
+          opacity: 0.35;
+          transform: scale(1.05);
+        }
+      }
+
+      .animate-pulse {
+        animation: pulse 6s ease-in-out infinite;
+      }
+
+      .animation-delay-500 {
+        animation-delay: 3s;
+      }
+    </style>
+  </footer>
+
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const icon = question.querySelector('i');
+
+        // Toggle answer visibility
+        answer.classList.toggle('hidden');
+
+        // Rotate icon
+        if (answer.classList.contains('hidden')) {
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // Form submission
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const message = document.getElementById('message').value;
+
+      // Create WhatsApp message
+      const whatsappMessage = `Olá Ervilha Tattoo, meu nome é ${name}. ${message}. Meu email é ${email} e meu telefone é ${phone}. Por favor, entre em contato comigo!`;
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+
+      // Open WhatsApp
+      window.open(`https://wa.me/5511999999999?text=${encodedMessage}`, '_blank');
+
+      // Reset form
+      this.reset();
+
+      // Show success message (you could add a proper alert/toast here)
+      alert('Sua mensagem foi enviada com sucesso! Entraremos em contato em breve pelo WhatsApp.');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+
+          // Close mobile menu if open
+          document.getElementById('mobile-menu').classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
